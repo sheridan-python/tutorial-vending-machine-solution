@@ -1,2 +1,2 @@
-# ci_example
-An example project with tests &amp; Travis integration
+# Vending Machine Kata
+This is a blank project used to solve the Vending Machine Kata
