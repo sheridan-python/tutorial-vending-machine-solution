@@ -5,4 +5,5 @@ dist: xenial
 install:
   - pip install -r requirements.txt
 script:
+  - pylint **/*.py
   - pytest
