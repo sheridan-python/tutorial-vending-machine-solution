@@ -5,5 +5,5 @@ dist: xenial
 install:
   - pip install -r requirements.txt
 script:
-  - pylint **/*.py
+  - find . -name '*.py' | xargs pylint
   - pytest
