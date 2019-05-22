@@ -22,3 +22,11 @@ def test_buy_banana():
     """
     with pytest.raises(ValueError):
         buy_product('banana', 5)  # Random value of 5 balance
+
+
+def test_buy_chips():
+    """
+    Given that chips are purchased with a balance of 225,
+    0 should be returned.
+    """
+    assert buy_product('chips', 225) == 0
