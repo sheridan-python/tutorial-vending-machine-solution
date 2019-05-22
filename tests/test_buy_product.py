@@ -47,3 +47,11 @@ def test_drink_with_a_274_should_raise_insufficient_funds():
     """
     with pytest.raises(InsufficientFunds):
         buy_product('drink', 274)
+
+
+def test_buy_a_drink_with_remaining_balance():
+    """
+    Given that the balance exceeds the cost of a drink,
+    the difference should be returned.
+    """
+    assert buy_product('drink', 300) == 25
