@@ -18,13 +18,17 @@ def return_change(balance):
     Returns balance in coins.
     """
     change = []
-    if balance and balance % 200 == 0:
+    while balance and balance % 200 == 0:
         change.append(200)
         balance -= 200
+    if balance and balance % 100 == 0:
+        change.append(100)
+        balance -= 100
 
     if balance:
         change.append(balance)
-    return change
+
+    return sorted(change, reverse=True)
 
 
 class InsufficientFunds(Exception):
