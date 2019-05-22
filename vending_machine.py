@@ -48,7 +48,8 @@ def buy_product(product, balance):
 
     if balance < price:
         raise InsufficientFunds
-    return 0
+
+    return balance - price
 
 
 class InsufficientFunds(Exception):
