@@ -30,3 +30,11 @@ def test_buy_chips():
     0 should be returned.
     """
     assert buy_product('chips', 225) == 0
+
+
+def test_buy_candy():
+    """
+    Given that candy is purchased with a balance of 315,
+    0 should be returned.
+    """
+    assert buy_product('candy', 315) == 0
