@@ -2,7 +2,7 @@
 A virtual vending machine.
 """
 # A list of coins allowed
-ACCEPTABLE_COINS = [5]
+ACCEPTABLE_COINS = [5, 10, 25]
 
 def insert_coin(coin, inserted_coins):
     """

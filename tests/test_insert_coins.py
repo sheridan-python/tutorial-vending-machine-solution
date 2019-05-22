@@ -16,6 +16,28 @@ def test_insert_five():
     assert inserted_coins == [5]
 
 
+def test_insert_ten():
+    """
+    Given 10 to an empty list of coins, 10 should be
+    appended.
+    """
+    inserted_coins = []
+    insert_coin(10, inserted_coins)
+
+    assert inserted_coins == [10]
+
+
+def test_insert_twenty_five():
+    """
+    Given 25 to an empty list of coins, 25 should be
+    appended.
+    """
+    inserted_coins = []
+    insert_coin(25, inserted_coins)
+
+    assert inserted_coins == [25]
+
+
 def test_insert_fifty():
     """
     Given 50, a ValueError should be raised.
