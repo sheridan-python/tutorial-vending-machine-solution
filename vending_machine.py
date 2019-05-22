@@ -30,6 +30,13 @@ def return_change(balance):
     return sorted(change, reverse=True)
 
 
+def buy_product(product, balance):
+    """
+    Debits the balance using the product's price. A sufficient
+    balance must be provided to complete the purchase.
+    """
+
+
 class InsufficientFunds(Exception):
     """
     Exception used to indicate that there isn't
