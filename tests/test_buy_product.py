@@ -3,7 +3,7 @@ Tests the buy_product function of the vending machine
 """
 import pytest
 
-from vending_machine import buy_product
+from vending_machine import InsufficientFunds, buy_product
 
 
 def test_buy_a_drink():
@@ -38,3 +38,12 @@ def test_buy_candy():
     0 should be returned.
     """
     assert buy_product('candy', 315) == 0
+
+
+def test_drink_with_a_274_should_raise_insufficient_funds():
+    """
+    Given that a drink is attempted to be purchased with a balance
+    of 274, an InsufficientFunds exception should be raised.
+    """
+    with pytest.raises(InsufficientFunds):
+        buy_product('drink', 274)
