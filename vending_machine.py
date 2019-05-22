@@ -17,7 +17,10 @@ def return_change(balance):
     """
     Returns balance in coins.
     """
-    return []
+    change = []
+    if balance:
+        change.append(balance)
+    return change
 
 
 class InsufficientFunds(Exception):
