@@ -2,7 +2,7 @@
 A virtual vending machine.
 """
 # A list of coins allowed
-ACCEPTABLE_COINS = [5, 10, 25]
+ACCEPTABLE_COINS = [200, 100, 25, 10, 5]
 
 def insert_coin(coin, inserted_coins):
     """
@@ -18,15 +18,12 @@ def return_change(balance):
     Returns balance in coins.
     """
     change = []
-    while balance and balance % 200 == 0:
-        change.append(200)
-        balance -= 200
-    if balance and balance % 100 == 0:
-        change.append(100)
-        balance -= 100
-
-    if balance:
-        change.append(balance)
+    while balance:
+        for coin in ACCEPTABLE_COINS:
+            if balance % coin == 0:
+                change.append(coin)
+                balance -= coin
+                break
 
     return sorted(change, reverse=True)
 
