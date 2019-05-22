@@ -4,6 +4,13 @@ A virtual vending machine.
 # A list of coins allowed
 ACCEPTABLE_COINS = [200, 100, 25, 10, 5]
 
+# A mapping of products and their prices
+PRODUCT_PRICES = {
+    'drink': 275,
+    'chips': 225,
+    'candy': 315
+}
+
 def insert_coin(coin, inserted_coins):
     """
     Accepts a coin and appends it to inserted_coins list.
@@ -35,9 +42,11 @@ def buy_product(product, balance):
     Debits the balance using the product's price. A sufficient
     balance must be provided to complete the purchase.
     """
-    if product not in ['drink', 'chips', 'candy']:
+    if product not in PRODUCT_PRICES:
         raise ValueError
-    if balance < 275:
+    price = PRODUCT_PRICES[product]
+
+    if balance < price:
         raise InsufficientFunds
     return 0
 
