@@ -37,6 +37,8 @@ def buy_product(product, balance):
     """
     if product not in ['drink', 'chips', 'candy']:
         raise ValueError
+    if balance < 275:
+        raise InsufficientFunds
     return 0
 
 
