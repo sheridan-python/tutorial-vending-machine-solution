@@ -22,3 +22,11 @@ def test_call_with_300():
 
 def test_call_with_265():
     assert return_change(265) == [200, 25, 25, 10, 5]
+
+
+def test_call_with_7():
+    assert return_change(7) == [5]
+
+
+def test_call_with_negative():
+    assert return_change(-9) == []

@@ -18,7 +18,9 @@ def return_change(balance):
     Returns balance in coins.
     """
     change = []
-    while balance:
+    balance -= balance % 5
+
+    while balance > 0:
         for coin in ACCEPTABLE_COINS:
             if balance % coin == 0:
                 change.append(coin)
