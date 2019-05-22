@@ -18,6 +18,10 @@ def return_change(balance):
     Returns balance in coins.
     """
     change = []
+    if balance and balance % 200 == 0:
+        change.append(200)
+        balance -= 200
+
     if balance:
         change.append(balance)
     return change
