@@ -13,6 +13,13 @@ def insert_coin(coin, inserted_coins):
     inserted_coins.append(coin)
 
 
+def return_change(balance):
+    """
+    Returns balance in coins.
+    """
+    return []
+
+
 class InsufficientFunds(Exception):
     """
     Exception used to indicate that there isn't
