@@ -35,6 +35,8 @@ def buy_product(product, balance):
     Debits the balance using the product's price. A sufficient
     balance must be provided to complete the purchase.
     """
+    if product != 'drink':
+        raise ValueError
     return 0
 
 
